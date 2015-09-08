@@ -12,4 +12,9 @@ class Product extends Model
     	//Product belongs to a Type
     	return $this->belongsTo("App\Models\Type");
     }
+    public function orders() {
+
+    	//Product belongs to a Type
+    	return $this->belongsToMany("App\Models\Order");
+    }
 }

@@ -13,8 +13,8 @@
 
 Route::get('/', function () {
 
-    // $product = \App\Models\Product::find(1);
-    // return $product->type;
+    // $product = \App\Models\Product::find(2);
+    // return $product->orders;
 
 	// $type = \App\Models\Type::find(2);
 	// return $type->products; 
@@ -23,10 +23,63 @@ Route::get('/', function () {
 	// return $users->orders; 
 
 	// $order = \App\Models\Order::find(1);
-	// return $order->user;
+	// return $order->products;
 
-    //return view('welcome');
 
+//-----------create type---------------
+    // $type = new \App\Models\Type();
+    // $type->name = "Shark";
+    // $type->save();
+
+    // return $type;
+
+//==================another way to create============
+
+	//=======method assignment=====
+	// $user = \App\Models\User::create([
+	// 	"username"=>"JoeJai",
+	// 	"firstname"=>"Joe",
+	// 	"lastname"=>"Jai",
+	// 	"email"=>"joe.jai@gmail.com",
+	// 	"password"=>"bla"
+	// 	]);
+
+	// return $user;
+
+
+
+    return view('welcome');
 });
+
+Route::get('about', function () {
+
+    return view('about');
+});
+
+
+Route::get('contact', function () {
+
+    return view('contact');
+});
+
+Route::get('types', function () {
+
+	$type = \App\Models\Type::find(1);
+
+    return view('types',['type'=>$type]);
+    // compact("type") ==
+});
+
+
+
+
+
+
+
+
+
+
+
+
 
 
