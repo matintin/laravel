@@ -62,13 +62,19 @@ Route::get('contact', function () {
     return view('contact');
 });
 
-Route::get('types', function () {
+Route::get('types/{id}', function ($id) {
 
-	$type = \App\Models\Type::find(1);
+	$type = \App\Models\Type::find($id);
 
     return view('types',['type'=>$type]);
     // compact("type") ==
 });
+
+Route::get('products/create', function () {
+
+    return view('createProduct');
+});
+
 
 
 

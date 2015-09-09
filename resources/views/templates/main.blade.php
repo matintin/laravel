@@ -68,7 +68,8 @@
 
 		<!-- View contents goes here -->
 		@yield('content')
-		@yield('contact')
+
+		
 		</div>
 		<footer></footer>
 
