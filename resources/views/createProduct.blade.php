@@ -4,7 +4,7 @@
 
 	<h2>Add New Product</h2>
 
-	<form action="">
+	<!-- {!! Form::open(array('url' => 'foo/bar')) !!} -->
 		<fielset>
 			<label for="">Product Name.</label>
 			<input type="text" name="" id="">
@@ -17,7 +17,7 @@
 
 			<input type="submit" value="Add">
 		</fielset>
-	</form>
+	<!-- {!! Form::close() !!} -->
 
 @endsection			
 		
